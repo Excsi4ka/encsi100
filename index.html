@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Pollution in NYC</title>
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-title-section">
+        <div class="content-width">
+            <h1>Plastic Pollution in NYC</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="top-panels-section">
+            <div class="content-width top-panels-grid">
+                <article class="top-panel-card">
+                    <img
+                        class="content-image"
+                        src="https://placehold.co/420x260?text=Replace+Image"
+                        alt="Placeholder environmental image"
+                    >
+                    <div class="content-card-body">
+                        <h2>Title</h2>
+                        <p>
+                            Blah blah blah
+                        </p>
+                        <p>
+                            Blah blah blah
+                        </p>
+                    </div>
+                </article>
+
+                <article class="top-panel-card">
+                    <img
+                        class="content-image"
+                        src="https://placehold.co/420x260?text=Replace+Image"
+                        alt="Placeholder image for plastic waste"
+                    >
+                    <div class="content-card-body counter-card-body">
+                        <h2>Plastic Waste Counter</h2>
+                        <p class="counter-description">Plastic items discarded since this page opened</p>
+                        <p class="counter-number" id="plastic-counter-number">0</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="live-map-section">
+            <div class="content-width">
+                <div class="section-title-block">
+                    <h2>NYC Live Litter Map</h2>
+                </div>
+                <div class="map-card">
+                    <div id="nyc-litter-map" aria-label="Leaflet map of public litter data in New York City"></div>
+                </div>
+                <p class="map-status-text" id="map-status-message">Loading public litter data for the current NYC map view.</p>
+<!--                <p class="map-fallback">-->
+<!--                    If the data layer fails, open-->
+<!--                    <a href="https://openlittermap.com/global?lat=40.703539&lon=-73.875389&zoom=12.16" target="_blank" rel="noreferrer">OpenLitterMap's NYC view</a>.-->
+<!--                </p>-->
+            </div>
+        </section>
+
+        <section class="information-section">
+            <div class="content-width">
+                <div class="section-title-block">
+                    <h2>Key Information</h2>
+                </div>
+
+                <article class="information-row">
+                    <img
+                        class="information-image"
+                        src="https://placehold.co/520x340?text=Replace+Image"
+                        alt="Placeholder image for section one"
+                    >
+                    <div class="information-text">
+                        <h3>Section Title One</h3>
+                        <ul>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="information-row information-row-reversed">
+                    <img
+                        class="information-image"
+                        src="https://placehold.co/520x340?text=Replace+Image"
+                        alt="Placeholder image for section two"
+                    >
+                    <div class="information-text">
+                        <h3>Section Title Two</h3>
+                        <ul>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="information-row">
+                    <img
+                        class="information-image"
+                        src="https://placehold.co/520x340?text=Replace+Image"
+                        alt="Placeholder image for section three"
+                    >
+                    <div class="information-text">
+                        <h3>Section Title Three</h3>
+                        <ul>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="information-row information-row-reversed">
+                    <img
+                        class="information-image"
+                        src="https://placehold.co/520x340?text=Replace+Image"
+                        alt="Placeholder image for section four"
+                    >
+                    <div class="information-text">
+                        <h3>Section Title Four</h3>
+                        <ul>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                            <li>             Blah blah blah</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="solutions-section">
+            <div class="content-width">
+                <div class="section-title-block">
+                    <h2>Solutions</h2>
+                </div>
+
+                <div class="solutions-grid">
+                    <article class="solution-card">
+                        <h3>Recycling</h3>
+                        <img
+                            class="solution-card-image"
+                            src="https://placehold.co/360x240?text=Replace+Image"
+                            alt="Placeholder image for recycling"
+                        >
+                    </article>
+
+                    <article class="solution-card">
+                        <h3>Something Else</h3>
+                        <img
+                            class="solution-card-image"
+                            src="https://placehold.co/360x240?text=Replace+Image"
+                            alt="Placeholder image for solution two"
+                        >
+                    </article>
+
+                    <article class="solution-card">
+                        <h3>Something Else</h3>
+                        <img
+                            class="solution-card-image"
+                            src="https://placehold.co/360x240?text=Replace+Image"
+                            alt="Placeholder image for solution three"
+                        >
+                    </article>
+
+                    <article class="solution-card">
+                        <h3>Something Else</h3>
+                        <img
+                            class="solution-card-image"
+                            src="https://placehold.co/360x240?text=Replace+Image"
+                            alt="Placeholder image for solution four"
+                        >
+                    </article>
+
+                    <article class="solution-card">
+                        <h3>Something Else</h3>
+                        <img
+                            class="solution-card-image"
+                            src="https://placehold.co/360x240?text=Replace+Image"
+                            alt="Placeholder image for solution five"
+                        >
+                    </article>
+
+                    <article class="solution-card">
+                        <h3>Something Else</h3>
+                        <img
+                            class="solution-card-image"
+                            src="https://placehold.co/360x240?text=Replace+Image"
+                            alt="Placeholder image for solution six"
+                        >
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+</body>
+</html>

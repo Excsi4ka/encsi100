@@ -1,0 +1,276 @@
+:root {
+    --page-background: #a8d5a2;
+    --card-background: #ffffff;
+    --card-background-soft: #e8f2ea;
+    --primary-text: #153126;
+    --secondary-text: #4b6357;
+    --accent-green: #2e7d4f;
+    --accent-green-dark: #225c3a;
+    --card-border: #cfe0d2;
+    --card-shadow: 0 12px 30px rgba(21, 49, 38, 0.08);
+    --cluster-yellow: #f2c94c;
+    --cluster-text: #4b3a00;
+    --map-background: #dfe7e0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-text);
+    background: var(--page-background);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--accent-green-dark);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+}
+
+h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.35rem;
+}
+
+.content-width {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.page-title-section {
+    padding: 4rem 0 2.5rem;
+    text-align: center;
+}
+
+.section-title-block {
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.top-panels-section,
+.live-map-section,
+.information-section,
+.solutions-section {
+    padding: 1rem 0 3rem;
+}
+
+.top-panels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.top-panel-card,
+.map-card,
+.information-row,
+.solution-card {
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+.top-panel-card,
+.solution-card {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content-card-body {
+    padding: 1.25rem;
+}
+
+.content-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background: var(--card-background-soft);
+}
+
+.content-card-body p,
+.information-text li,
+.map-status-text {
+    color: var(--secondary-text);
+}
+
+.counter-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.counter-description {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: var(--accent-green-dark);
+}
+
+.counter-number {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    font-weight: 800;
+    color: var(--accent-green);
+}
+
+.map-card {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#nyc-litter-map {
+    width: 100%;
+    min-height: 520px;
+    background: var(--map-background);
+}
+
+.map-status-text {
+    margin-top: 0.85rem;
+}
+
+.map-status-text.is-error {
+    color: #8a2f2f;
+}
+
+.map-cluster-marker-wrapper {
+    background: transparent;
+    border: 0;
+}
+
+.map-cluster-marker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 0.55rem;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    background: var(--cluster-yellow);
+    color: var(--cluster-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 6px 14px rgba(75, 58, 0, 0.22);
+}
+
+.information-row {
+    display: grid;
+    grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.information-row-reversed {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+}
+
+.information-row-reversed .information-image {
+    order: 2;
+}
+
+.information-row-reversed .information-text {
+    order: 1;
+}
+
+.information-image {
+    width: 100%;
+    aspect-ratio: 13 / 8;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--card-background-soft);
+}
+
+.information-text ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.solution-card {
+    text-align: center;
+}
+
+.solution-card h3 {
+    padding: 1.1rem 1.1rem 0;
+}
+
+.solution-card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: var(--card-background-soft);
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 900px) {
+    .top-panels-grid,
+    .information-row,
+    .information-row-reversed {
+        grid-template-columns: 1fr;
+    }
+
+    .solutions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .information-row-reversed .information-image,
+    .information-row-reversed .information-text {
+        order: initial;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-title-section {
+        padding-top: 3rem;
+    }
+
+    .content-image,
+    .solution-card-image,
+    #nyc-litter-map {
+        min-height: 220px;
+        height: auto;
+    }
+
+    .information-row {
+        padding: 1rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+}
