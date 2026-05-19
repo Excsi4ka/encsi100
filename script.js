@@ -1,5 +1,5 @@
 const startingPlasticCount = 0;
-const plasticsPerSecond = 12;
+const plasticsPerSecond = 752;
 const pointsMinZoom = 15;
 
 function startCounter() {
@@ -129,7 +129,7 @@ function initializeLeafletMap() {
         } catch (error) {
             clusterLayer.clearLayers();
             pointLayer.clearLayers();
-            setMapStatus("Could not load the map.", true);
+            //setMapStatus("Could not load the map.", true);
         }
     }
 
